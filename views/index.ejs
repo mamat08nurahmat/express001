@@ -1,0 +1,30 @@
+<% include template/header%>
+
+<h1>ADD</h1>
+<form method="POST" action="/users/add" >
+<label>First Name</label>
+<input type="text" name="first_name">
+<br>
+<label>Last Name</label>
+<input type="text" name="last_name">
+<br>
+<label>Email</label>
+<input type="text" name="email">
+<br>
+<input type="submit" value="submit">
+</form>
+
+<h1>CONTEN TEMPLATE</h1>
+<H1><%= title %></H1>
+
+<ul>
+<% users.forEach(function(user){ %>
+
+<li>
+<%= user.first_name+" "+user.last_name %>
+</li>
+
+<%})%>
+</ul>
+
+<% include template/footer%>
